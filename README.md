@@ -1,6 +1,7 @@
 ___
 ![Alt-текст](img/logo.jpg)
 [![Тут текст](https://camo.githubusercontent.com/b0224997019dec4e51d692c722ea9bee2818c837/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6d6173686170652f6170697374617475732e737667)](LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/itstep-vrn/seabattleconsole/badge/master)](https://www.codefactor.io/repository/github/itstep-vrn/seabattleconsole/overview/master)
 
 + **Год выпуска: 2019**
 + **Жанр: Стратегия**
