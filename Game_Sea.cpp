@@ -58,8 +58,7 @@ void winn(int numWin);
 void outlineAroundShipInsaid(char map2[][19], int ship, int numShip);
 void outlineAroundShip(char map1[][19], char map2[][19], int ship);
 
-int main()
-{
+int main(){
 	ConsoleWindow();
 menuGameAgain:
 
@@ -524,10 +523,7 @@ menuGameAgain:
 
 	system("pause>nul");
 }
-
-// Цвет игрового поля
-void OkrasField(char map[][19], int color1, int color2, int color3, int color4, int color5, int color6, int x)
-{
+void OkrasField(char map[][19], int color1, int color2, int color3, int color4, int color5, int color6, int x){ // Цвет игрового поля
 	HANDLE consoleOutput;
 	consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -571,10 +567,7 @@ void OkrasField(char map[][19], int color1, int color2, int color3, int color4, 
 	mapfield2.map[0][12] = '2'; // замена на экземпляре поля номер игрока
 	mapfield4.map[0][12] = '2'; // замена на экземпляре поля номер игрока
 }
-
-// Меню установки кораблей
-void menuBeckShip(string ship)
-{
+void menuBeckShip(string ship){ // Меню установки кораблей
 	printStuff(0, 31);
 
 	string installationMenu = "\t\t\t УСТАНОВИТЕ КОРАБЛИ";
@@ -590,10 +583,7 @@ void menuBeckShip(string ship)
 	OkrasMenu(erase, 6); cout << endl; cout << endl;
 	OkrasMenu(exit, 6); cout << endl; cout << endl;
 }
-
-// цвет логотипа
-void OkrasLogoSea(char map[][55])
-{
+void OkrasLogoSea(char map[][55]){// цвет логотипа
 	HANDLE consoleOutput;
 	consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -610,10 +600,7 @@ void OkrasLogoSea(char map[][55])
 		}
 	}
 }
-
-// Функция расстановки кораблей
-void funcBeckShip(char map[][19], int button1, int a, int b)
-{
+void funcBeckShip(char map[][19], int button1, int a, int b){ // Функция расстановки кораблей
 	char a1;
 	int pr = 0;
 
@@ -798,10 +785,7 @@ void funcBeckShip(char map[][19], int button1, int a, int b)
 		esc = 1;
 	}
 }
-
-// Логотип морского боя
-void LogoSea()
-{
+void LogoSea(){ // Логотип морского боя
 	char mapLogo[55][55] = {
 		"   888  88888   88     8888888888888888888888888888888",
 		"  8     8      8  8    88<><><><><><><><><><><><><><88",
@@ -816,10 +800,7 @@ void LogoSea()
 	};
 	OkrasLogoSea(mapLogo);
 }
-
-// Передвижение по меню Морской бой
-void fViborSea(int count)
-{
+void fViborSea(int count){ // Передвижение по меню Морской бой
 	string oneVibor = " 1. ИГРАТЬ ";
 	string twoVibor = " 2. ОПИСАНИЕ ";
 	string threeVibor = " 3. АВТОРЫ ";
@@ -845,10 +826,7 @@ void fViborSea(int count)
 	cout << "\t\t\t\t"; OkrasMenu(threeVibor, a3); cout << endl; cout << endl;
 	cout << "\t\t\t\t"; OkrasMenu(fourVibor, a4); cout << endl; cout << endl;
 }
-
-//передвижение по полю
-void moveField(char map[][19], int but)
-{
+void moveField(char map[][19], int but){ //передвижение по полю
 	char a, b, c;
 	c = 42; // *
 	b = 64; // @
@@ -1078,10 +1056,7 @@ void moveField(char map[][19], int but)
 		}
 	}
 }
-
-// Функция отображения автора
-void mapAutor()
-{
+void mapAutor(){// Функция отображения автора
 	char map[70][70] = {
 "	&& && &&&   &&  & &&   & &&   &&  & && &&  & ",
 "	&&&  &&  &  &&& &  && & && &  &&  &    &&& & ",
@@ -1095,7 +1070,6 @@ void mapAutor()
 "	         &&&   &&  && &&&&&& &&   &&   &&",
 "	          &    &&  && &    & &&&& &&   &&",
 	};
-
 	printStuff(0, 15);
 	OkrasAutorAndInstr(map, 12, 11);
 	printStuff(0, 15);
@@ -1112,10 +1086,7 @@ void mapAutor()
 	OkrasAutorAndInstr(map, 13, 11);
 	printStuff(0, 15);
 }
-
-// Функция меню описания
-void mapInstr()
-{
+void mapInstr(){// Функция меню описания
 	char map[35][70]
 	{
 	"                                     ПРАВИЛА ИГРЫ",
@@ -1150,14 +1121,10 @@ void mapInstr()
 	"        ",
 	"          стрелявший игрок получает право на ещё один выстрел.",
 	};
-
 	printStuff(0, 12);
 	OkrasAutorAndInstr(map, 6, 31);
 }
-
-// Окрашивание пункта Автор
-void OkrasAutorAndInstr(char map[][70], int color, int str)
-{
+void OkrasAutorAndInstr(char map[][70], int color, int str){// Окрашивание пункта Автор
 	HANDLE consoleOutput;
 	consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -1170,10 +1137,7 @@ void OkrasAutorAndInstr(char map[][70], int color, int str)
 		cout << endl;
 	}
 }
-
-// Отрисовка кораблей
-void drawingShips(char map[][19], int but)
-{
+void drawingShips(char map[][19], int but){// Отрисовка кораблей
 	string sea4 = "\t\tПоставте  четырехпалубный корабль";
 	string sea3 = "\t\tПоставте  трехпалубный корабль   ";
 	string sea2 = "\t\tПоставте  двухпалубный корабль   ";
@@ -1200,10 +1164,7 @@ void drawingShips(char map[][19], int but)
 		ship = 11;
 	}
 }
-
-// Отрисовка вокруг убитого корабля
-void outlineAroundShip(char map1[][19], char map2[][19], int ship)
-{
+void outlineAroundShip(char map1[][19], char map2[][19], int ship){ // Отрисовка вокруг убитого корабля
 	int numShip = 0;
 
 	if (map2[y + 1][x] == 88 && map2[y - 1][x] == 88 && map1[y + 2][x] != ship && map1[y - 2][x] != ship){
@@ -1307,10 +1268,7 @@ void outlineAroundShip(char map1[][19], char map2[][19], int ship)
 		}
 	}
 }
-
-// Отрисовка вокруг убитого корабля внутреняя функция
-void outlineAroundShipInsaid(char map[][19], int ship, int numShip)
-{
+void outlineAroundShipInsaid(char map[][19], int ship, int numShip){// Отрисовка вокруг убитого корабля внутреняя функция
 	if (numShip == 1){
 		for (int i = 0; i < ship; i++){
 			if (map[y + i][x + 1] == ' ') { // Отрисовка вокруг коробля с правой стороны			
@@ -1425,10 +1383,7 @@ void outlineAroundShipInsaid(char map[][19], int ship, int numShip)
 		}
 	}
 }
-
-// Победа
-void winn(int numWin)
-{
+void winn(int numWin){ // Победа
 	do{
 		printStuff(0, 0);
 		LogoSea();
@@ -1452,35 +1407,23 @@ void winn(int numWin)
 		}
 	} while (esc == 0);
 }
-
-// устранение залипания курсора
-void eliminationSticking(char map[][19])
-{
-	if (map[y][x] == '@') { // устранение залипания курсора 	
+void eliminationSticking(char map[][19]){// устранение залипания курсора
+	if (map[y][x] == '@') { 	
 		map[y][x] = ' ';
 	}
 }
-
-// Скрыть видимость курсора
-void CursorVisible()
-{
+void CursorVisible(){// Скрыть видимость курсора
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);	// Получение дескриптора устройства стандартного вывода
 	CONSOLE_CURSOR_INFO structCursorInfo;
 	GetConsoleCursorInfo(hConsole, &structCursorInfo);
 	structCursorInfo.bVisible = FALSE;
 	SetConsoleCursorInfo(hConsole, &structCursorInfo);
 }
-
-// Размер окна консоли и его отображение
-void ConsoleWindow()
-{
+void ConsoleWindow(){ // Размер окна консоли и его отображение
 	HWND window_header = GetConsoleWindow();
 	SetWindowPos(window_header, HWND_TOP, 200, 100, 800, 1000, NULL);
 }
-
-// Обновление экрана
-void printStuff(int x, int y)
-{
+void printStuff(int x, int y)// Обновление экрана{
 	// Sleep(95);
 	HANDLE hd = GetStdHandle(STD_OUTPUT_HANDLE);
 	COORD cd;
@@ -1488,10 +1431,7 @@ void printStuff(int x, int y)
 	cd.Y = y;
 	SetConsoleCursorPosition(hd, cd);
 }
-
-// Смена шрифта  + размер шрифта
-void changFont()
-{
+void changFont(){ // Смена шрифта  + размер шрифта
 	CONSOLE_FONT_INFOEX cfi;
 	cfi.cbSize = sizeof(cfi);
 	cfi.nFont = 0;
@@ -1502,10 +1442,7 @@ void changFont()
 	std::wcscpy(cfi.FaceName, L"Lucida Console"); // Choose your font
 	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi);
 }
-
-// Окрашивание меню
-void OkrasMenu(string vibor, int color)
-{
+void OkrasMenu(string vibor, int color){  // Окрашивание меню
 	HANDLE consoleOutput;
 	consoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 
