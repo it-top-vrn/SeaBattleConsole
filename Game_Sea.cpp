@@ -290,7 +290,6 @@ menuGameAgain:
 				}
 
 				if (user == 1 || user == 3) { // Ход первого игрока
-
 					user = 3;
 
 					printStuff(0, 31);
@@ -1193,7 +1192,6 @@ void outlineAroundShip(char map1[][19], char map2[][19], int ship){ // Отри�
 	}
 	if (map1[y + 1][x] != ship && map1[y - 1][x] != ship
 		&& map1[y][x + 1] != ship && map1[y][x - 1] != ship){
-
 		numShip = 1;
 		outlineAroundShipInsaid(map2, 1, 1); // Функция обрисовки однопалубного
 	}
