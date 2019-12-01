@@ -1179,7 +1179,6 @@ void outlineAroundShip(char map1[][19], char map2[][19], int ship){ // Отри�
 		y -= 2;
 		outlineAroundShipInsaid(map2, 4, 1);
 	}
-
 	if (map2[y][x + 1] == 88 && map2[y][x - 1] == 88 && map1[y][x + 2] != ship && map1[y][x - 2] != ship){
 		x++;
 		outlineAroundShipInsaid(map2, 3, 4);
@@ -1192,7 +1191,6 @@ void outlineAroundShip(char map1[][19], char map2[][19], int ship){ // Отри�
 		x -= 2;
 		outlineAroundShipInsaid(map2, 4, 3);
 	}
-
 	if (map1[y + 1][x] != ship && map1[y - 1][x] != ship
 		&& map1[y][x + 1] != ship && map1[y][x - 1] != ship){
 
@@ -1337,8 +1335,7 @@ void outlineAroundShipInsaid(char map[][19], int ship, int numShip){// Отри�
 		if (map[y][x - 1] == ' ') { // Отрисовка коробля слева		
 			map[y][x - 1] = '*';
 		}
-		if (map[y + 1][x - 1] == ' ') { // Отрисовка коробля слева
-		
+		if (map[y + 1][x - 1] == ' ') { // Отрисовка коробля слева		
 			map[y + 1][x - 1] = '*';
 		}
 		if (map[y - 1][x - 1] == ' ') { // Отрисовка коробля слева	
